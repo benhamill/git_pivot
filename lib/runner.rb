@@ -19,6 +19,7 @@
 
 require 'trollop'
 require 'date'
+require 'yaml'
 
 module GitPivot
   class Runner
