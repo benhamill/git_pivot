@@ -147,6 +147,14 @@ module GitPivot
       end
     end
 
+    def current_story
+      if @g
+        @g.lib.branch_current.split('_').first
+      else
+        false
+      end
+    end
+
     def topic_branch_name(story, name = nil)
       name_to_use =
         if name
