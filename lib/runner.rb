@@ -50,6 +50,8 @@ module GitPivot
       if @method and @git_pivot.method(@method).arity.abs > 0
         if @cmd_opts[:id]
           args << @cmd_opts[:id]
+        elsif @git_pivot.current_story
+          args << @git_pivot.current_story
         elsif @states.any?
           args << @states.first
         else

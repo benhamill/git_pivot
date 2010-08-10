@@ -115,6 +115,20 @@ module GitPivot
       display_tasks(id, tasks)
     end
 
+    def current_story
+      if @g
+        story_id = @g.lib.branch_current.split('_').first
+
+        if story_id =~ /^\d+$/
+          story_id
+        else
+          false
+        end
+      else
+        false
+      end
+    end
+
     private
     def display_stories(stories)
       data = stories.collect do |story| 
@@ -144,14 +158,6 @@ module GitPivot
 
         puts "Switching to #{name} branch"
         @g.branch(name).checkout
-      end
-    end
-
-    def current_story
-      if @g
-        @g.lib.branch_current.split('_').first
-      else
-        false
       end
     end
 
