@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["hone", "benhamill"]
-  s.date = %q{2010-08-09}
+  s.date = %q{2010-08-10}
   s.default_executable = %q{git_pivot}
   s.description = %q{A command line tool for working with Pivotal Tracker. Also some handy git integration.}
   s.email = %q{hone02@gmail.com}
